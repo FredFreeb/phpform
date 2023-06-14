@@ -43,7 +43,7 @@ if ($sexe !== '' && $prenom !== '' && $nom !== '' && $dateNaissance !== '' && $s
         $age = $dateNaissanceObj->diff($dateActuelleObj)->y;
 // si aujourd'hui correspond au jour et mois de ton anniversaire
         if ($dateNaissanceObj->format('m-d') === $dateActuelleObj->format('m-d')) {
-            $message = "$salutation $sexe $nom $prenom.<br>Vous êtes né le " . $dateNaissanceObj->format('d/m/Y') ."<br> Aujourd'hui, c'est votre anniversaire<br>" . "Vous avez donc $age ans !<br> Joyeux anniversaire !<br> À dans 365 jours... ";
+            $message = "$salutation $sexe $nom $prenom.<br>Vous êtes né le " . $dateNaissanceObj->format('d/m/Y') ."<br> Aujourd'hui, c'est votre anniversaire<br>" . "Vous avez donc $age ans !<br> Joyeux anniversaire !<br> À l'année prochaine... ";
         } else {
             $prochainsJours = $anniversaireCourant->diff($dateActuelleObj)->days;
             $prochainsJours += 1;
